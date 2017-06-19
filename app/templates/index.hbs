@@ -1,17 +1,23 @@
-<div class="sidebar-wrapper">
-  {{#ui-sidebar}}
+<div class="index-screen">
+  <div class="sidebar">
+    {{#ui-sidebar}}
 
-    {{ui-sidebar/account}}
+      {{ui-sidebar/account}}
 
-    {{#ui-sidebar/section title='Klienti'}}
-      {{ui-sidebar/section/item icon='camera' title='Gaida rindā' active=true}}
-      {{ui-sidebar/section/item icon='bath' title='Apstrādātie'}}
-    {{/ui-sidebar/section}}
+      {{#ui-sidebar/section title='Klienti'}}
+        {{ui-sidebar/section/item icon='camera' title='Gaida rindā' active=true}}
+        {{ui-sidebar/section/item icon='bath' title='Apstrādātie'}}
+      {{/ui-sidebar/section}}
 
-    {{#ui-sidebar/section title='Settings'}}
-      {{ui-sidebar/section/item icon='thermometer-empty' title='Account'}}
-      {{ui-sidebar/section/item title='Users'}}
-    {{/ui-sidebar/section}}
+      {{#ui-sidebar/section title='Settings'}}
+        {{ui-sidebar/section/item icon='thermometer-empty' title='Account'}}
+        {{ui-sidebar/section/item title='Users'}}
+      {{/ui-sidebar/section}}
 
-  {{/ui-sidebar}}
+    {{/ui-sidebar}}
+  </div>
+  <div class="content">
+    <div>{{strings}}</div>
+    <div>{{l 'hello' 'one' 'two'}}</div>
+  </div>
 </div>

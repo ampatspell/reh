@@ -21,11 +21,10 @@
     {{#ui-screen as |screen|}}
       {{#screen.header as |header|}}
         {{header.title value='Add new customer'}}
-        {{header.button value='Save'}}
-        {{header.button value='Cancel'}}
+        {{header.button title='Save'}}
+        {{header.button title='Cancel' class='warning'}}
       {{/screen.header}}
       {{#screen.content}}
-        {{ui-button title='Save'}}
       {{/screen.content}}
     {{/ui-screen}}
 

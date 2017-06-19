@@ -17,5 +17,15 @@
     {{/ui-sidebar}}
   </div>
   <div class="content">
+
+    {{#ui-screen as |screen|}}
+      {{#screen.header as |header|}}
+        {{header.title value='Add new customer'}}
+        {{header.button value='Save'}}
+      {{/screen.header}}
+      {{#screen.content}}
+      {{/screen.content}}
+    {{/ui-screen}}
+
   </div>
 </div>

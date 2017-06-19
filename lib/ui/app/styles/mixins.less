@@ -17,3 +17,25 @@
 .no-ellipsis() {
   white-space: normal;
 }
+
+.font-weight(@weight) when(@weight = light) {
+  font-weight: @font-weight-light;
+}
+
+.font-weight(@weight) when(@weight = regular) {
+  font-weight: @font-weight-regular;
+}
+
+.font-weight(@weight) when(@weight = semi-bold) {
+  font-weight: @font-weight-semi-bold;
+}
+
+.font-weight(@weight) when(@weight = bold) {
+  font-weight: @font-weight-bold;
+}
+
+.font(@weight: normal, @size: @font-size, @lineheight: ceil(@size * 1.5)) {
+  font-size: @size;
+  line-height: @lineheight;
+  .font-weight(@weight);
+}

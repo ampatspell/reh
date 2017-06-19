@@ -1,3 +1,17 @@
-{{#ui-row}}
-  It works
-{{/ui-row}}
+<div class="sidebar-wrapper">
+  {{#ui-sidebar}}
+
+    {{ui-sidebar/account}}
+
+    {{#ui-sidebar/section title='Klienti'}}
+      {{ui-sidebar/section/item title='Gaida rindā' active=true}}
+      {{ui-sidebar/section/item title='Apstrādātie'}}
+    {{/ui-sidebar/section}}
+
+    {{#ui-sidebar/section title='Settings'}}
+      {{ui-sidebar/section/item title='Account'}}
+      {{ui-sidebar/section/item title='Users'}}
+    {{/ui-sidebar/section}}
+
+  {{/ui-sidebar}}
+</div>

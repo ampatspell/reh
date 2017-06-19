@@ -1,0 +1,26 @@
+.ui-sidebar-section {
+  margin: 20px 0 0 0;
+  > .title {
+    padding: 0 @ui-sidebar-padding;
+    .font(regular, 11px, 1.5);
+  }
+  > .content {
+    margin-top: 5px;
+    > .ui-sidebar-section-item {
+      padding: 5px @ui-sidebar-padding;
+      > .title {
+        .font(regular, 14px, 1.5);
+      }
+      &:hover {
+        background: fadeout(@accent-color-1, 80%);
+      }
+      &.active {
+        background: @accent-color-1;
+        color: @white-color;
+        &:hover {
+        background: darken(@accent-color-1, 3%);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.ui-sidebar-account {
+  padding: @ui-sidebar-padding @ui-sidebar-padding 0 @ui-sidebar-padding;
+  display: flex;
+  > .image {
+    @size: 40px;
+    width: @size;
+    height: @size;
+    background: fadeout(@accent-color-1, 70%);
+    border: 1px solid fadeout(@accent-color-1, 65%);
+    border-radius: 3px;
+  }
+  > .details {
+    min-width: 0;
+    flex-grow: 1;
+    padding: 1px 0 0 10px;
+    > .name {
+      .font(regular, 14px, 1.5);
+      .ellipsis;
+    }
+    > .role {
+      .font(regular, 11px, 1.5);
+    }
+  }
+}

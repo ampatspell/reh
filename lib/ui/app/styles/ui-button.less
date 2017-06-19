@@ -1,0 +1,17 @@
+.ui-button {
+  -webkit-appearance: none;
+  background: @accent-color-2;
+  border: 1px solid @accent-color-2-border;
+  color: @white-color;
+  .font(regular, 15px, 1.5);
+  padding: 3px 10px;
+  border-radius: 3px;
+  outline: none;
+  transition:
+    background-color @transition,
+    border-color @transition;
+  &:hover {
+    background: darken(@accent-color-2, 5%);
+    border: 1px solid darken(@accent-color-2-border, 5%);
+  }
+}

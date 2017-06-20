@@ -16,6 +16,7 @@ Router.map(function() {
       this.route('button');
       this.route('textfield');
       this.route('textarea');
+      this.route('table');
     });
   });
 

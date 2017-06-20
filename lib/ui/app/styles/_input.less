@@ -1,0 +1,35 @@
+._input() {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 3px 7px 4px 7px;
+  border-radius: 3px;
+  outline: none;
+  .font(regular, 15px, 1.5);
+
+  transition:
+    background-color @transition,
+    border-color @transition;
+
+  color: @black-color;
+  &::placeholder {
+    color: fadeout(@black-color, 70%);
+  }
+
+  background: @background-color-1;
+  border: 1px solid fadeout(@black-color, 90%);
+  &:hover,
+  &:focus {
+    border-color: fadeout(@black-color, 70%);
+  }
+}
+
+._input-disabled() {
+  color: fadeout(@black-color, 50%);
+  &::placeholder {
+    color: fadeout(@black-color, 70%);
+  }
+  &:hover,
+  &:focus {
+    border-color: fadeout(@black-color, 90%);
+  }
+}

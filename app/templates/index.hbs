@@ -52,6 +52,21 @@
           {{/ui-row}}
         {{/ui-block}}
 
+        {{#ui-block title='Textarea'}}
+          {{#ui-row title='Normal placeholder'}}
+            {{ui-textarea placeholder='Type your name'}}
+          {{/ui-row}}
+          {{#ui-row title='Normal value'}}
+            {{ui-textarea value='This is my name'}}
+          {{/ui-row}}
+          {{#ui-row title='Disabled placeholder'}}
+            {{ui-textarea placeholder='Type nothing' disabled=true}}
+          {{/ui-row}}
+          {{#ui-row title='Disabled value'}}
+            {{ui-textarea value='There is nothing' disabled=true}}
+          {{/ui-row}}
+        {{/ui-block}}
+
       {{/screen.content}}
     {{/ui-screen}}
 

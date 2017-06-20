@@ -1,0 +1,22 @@
+{{#ui-screen as |screen|}}
+  {{#screen.header as |header|}}
+    {{header.title value='Buttons'}}
+  {{/screen.header}}
+  {{#screen.content}}
+
+    {{#ui-block}}
+
+      {{#ui-row title='Normal'}}
+        {{ui-button title='Default' action=(action 'save')}}
+        {{ui-button title='Disabled' action=(action 'save') disabled=true}}
+      {{/ui-row}}
+
+      {{#ui-row title='Warning'}}
+        {{ui-button title='Default' action=(action 'save') class='warning'}}
+        {{ui-button title='Disabled' action=(action 'save') disabled=true class='warning'}}
+      {{/ui-row}}
+
+    {{/ui-block}}
+
+  {{/screen.content}}
+{{/ui-screen}}

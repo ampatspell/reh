@@ -1,0 +1,23 @@
+{{#ui-screen as |screen|}}
+  {{#screen.header as |header|}}
+    {{header.title value='Textfields'}}
+  {{/screen.header}}
+  {{#screen.content}}
+
+    {{#ui-block}}
+      {{#ui-row title='Normal placeholder'}}
+        {{ui-input placeholder='Type your name'}}
+      {{/ui-row}}
+      {{#ui-row title='Normal value'}}
+        {{ui-input value='This is my name'}}
+      {{/ui-row}}
+      {{#ui-row title='Disabled placeholder'}}
+        {{ui-input placeholder='Type nothing' disabled=true}}
+      {{/ui-row}}
+      {{#ui-row title='Disabled value'}}
+        {{ui-input value='There is nothing' disabled=true}}
+      {{/ui-row}}
+    {{/ui-block}}
+
+  {{/screen.content}}
+{{/ui-screen}}

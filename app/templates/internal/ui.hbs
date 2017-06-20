@@ -1,0 +1,31 @@
+{{#ui-master-detail as |md|}}
+  {{#md.master}}
+
+    {{#ui-sidebar}}
+
+      {{ui-sidebar/account}}
+
+      {{#ui-sidebar/section}}
+        {{ui-sidebar/section/item icon='chevron-left' title='Home' action=(action 'transitionTo' 'index')}}
+      {{/ui-sidebar/section}}
+
+      {{#ui-sidebar/section title='User interface'}}
+        {{#each routes as |route|}}
+          {{ui-sidebar/section/item
+              icon=route.icon
+              title=route.title
+              action=(action 'transitionTo' route.absoluteRoute)
+              active=route.isActive
+          }}
+        {{/each}}
+      {{/ui-sidebar/section}}
+
+    {{/ui-sidebar}}
+
+  {{/md.master}}
+  {{#md.detail}}
+
+    {{outlet}}
+
+  {{/md.detail}}
+{{/ui-master-detail}}

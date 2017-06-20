@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
+  this.route('internal', { path: '/_dev' }, function() {
+    this.route('ui', function() {
+      this.route('checkbox');
+      this.route('button');
+      this.route('textfield');
+      this.route('textarea');
+    });
+  });
+
 });
 
 export default Router;

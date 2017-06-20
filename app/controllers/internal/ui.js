@@ -1,0 +1,45 @@
+import Ember from 'ember';
+
+const {
+  computed,
+  merge
+} = Ember;
+
+const routes = [
+  { icon: 'square-o', title: 'Button', route: 'button' },
+  { icon: 'check-square-o', title: 'Checkbox', route: 'checkbox' },
+  { icon: 'id-card-o', title: 'Textfield', route: 'textfield' },
+  { icon: 'th-large', title: 'Textarea', route: 'textarea' },
+];
+
+const Route = Ember.Object.extend({
+
+  title: null,
+  route: null,
+
+  absoluteRoute: computed('route', function() {
+    return `internal.ui.${this.get('route')}`;
+  }).readOnly(),
+
+  isActive: computed('absoluteRoute', 'router.currentRouteName', function() {
+    return this.get('absoluteRoute') === this.get('router.currentRouteName');
+  }).readOnly(),
+
+});
+
+export default Ember.Controller.extend({
+
+  routes: computed(function() {
+    let router = this.get('router');
+    return routes.map(props => {
+      return Route.create(merge({ router }, props));
+    });
+  }).readOnly(),
+
+  actions: {
+    transitionTo(name) {
+      this.get('router').transitionTo(name);
+    }
+  }
+
+});

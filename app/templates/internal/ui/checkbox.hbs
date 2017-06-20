@@ -1,0 +1,23 @@
+{{#ui-screen as |screen|}}
+  {{#screen.header as |header|}}
+    {{header.title value='Checkboxes'}}
+  {{/screen.header}}
+  {{#screen.content}}
+
+    {{#ui-block}}
+      {{#ui-row title='Normal'}}
+        {{ui-checkbox value=off title='Patient ate chocolate'}}
+      {{/ui-row}}
+      {{#ui-row title='Checked'}}
+        {{ui-checkbox value=on title='Patient drank coffee'}}
+      {{/ui-row}}
+      {{#ui-row title='Disabled'}}
+        {{ui-checkbox value=off title='Patient was aware of sugar hazards' disabled=true}}
+      {{/ui-row}}
+      {{#ui-row title='Disabled checked'}}
+        {{ui-checkbox value=on title='Patient was out of this world' disabled=true}}
+      {{/ui-row}}
+    {{/ui-block}}
+
+  {{/screen.content}}
+{{/ui-screen}}

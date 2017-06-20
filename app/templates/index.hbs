@@ -1,90 +1,18 @@
-<div class="index-screen">
-  <div class="sidebar">
+{{#ui-master-detail as |md|}}
+  {{#md.master}}
+
     {{#ui-sidebar}}
 
       {{ui-sidebar/account}}
 
-      {{#ui-sidebar/section title='Klienti'}}
-        {{ui-sidebar/section/item icon='camera' title='Gaida rindā' active=true}}
-        {{ui-sidebar/section/item icon='bath' title='Apstrādātie'}}
-      {{/ui-sidebar/section}}
-
-      {{#ui-sidebar/section title='Settings'}}
-        {{ui-sidebar/section/item icon='thermometer-empty' title='Account'}}
-        {{ui-sidebar/section/item title='Users'}}
+      {{#ui-sidebar/section title='Internal'}}
+        {{ui-sidebar/section/item icon='camera' title='User interface' action=(action 'transitionToRoute' 'internal.ui')}}
       {{/ui-sidebar/section}}
 
     {{/ui-sidebar}}
-  </div>
-  <div class="content">
 
-    {{#ui-screen as |screen|}}
-      {{#screen.header as |header|}}
-        {{header.title value='Add new customer'}}
-        {{header.button title='Save'}}
-        {{header.button title='Cancel' class='warning'}}
-      {{/screen.header}}
-      {{#screen.content}}
+  {{/md.master}}
+  {{#md.detail}}
 
-        {{#ui-block title='Checkbox'}}
-          {{#ui-row title='Normal'}}
-            {{ui-checkbox value=off title='Default'}}
-          {{/ui-row}}
-          {{#ui-row title='Checked'}}
-            {{ui-checkbox value=on title='Default'}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled'}}
-            {{ui-checkbox value=off title='Disabled' disabled=true}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled checked'}}
-            {{ui-checkbox value=on title='Disabled' disabled=true}}
-          {{/ui-row}}
-        {{/ui-block}}
-
-
-        {{#ui-block title='Buttons'}}
-          {{#ui-row title='Normal'}}
-            {{ui-button title='Default' action=(action 'save')}}
-            {{ui-button title='Disabled' action=(action 'save') disabled=true}}
-          {{/ui-row}}
-          {{#ui-row title='Warning'}}
-            {{ui-button title='Default' action=(action 'save') class='warning'}}
-            {{ui-button title='Disabled' action=(action 'save') disabled=true class='warning'}}
-          {{/ui-row}}
-        {{/ui-block}}
-
-        {{#ui-block title='Input'}}
-          {{#ui-row title='Normal placeholder'}}
-            {{ui-input placeholder='Type your name'}}
-          {{/ui-row}}
-          {{#ui-row title='Normal value'}}
-            {{ui-input value='This is my name'}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled placeholder'}}
-            {{ui-input placeholder='Type nothing' disabled=true}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled value'}}
-            {{ui-input value='There is nothing' disabled=true}}
-          {{/ui-row}}
-        {{/ui-block}}
-
-        {{#ui-block title='Textarea'}}
-          {{#ui-row title='Normal placeholder'}}
-            {{ui-textarea placeholder='Type your name'}}
-          {{/ui-row}}
-          {{#ui-row title='Normal value'}}
-            {{ui-textarea value='This is my name'}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled placeholder'}}
-            {{ui-textarea placeholder='Type nothing' disabled=true}}
-          {{/ui-row}}
-          {{#ui-row title='Disabled value'}}
-            {{ui-textarea value='There is nothing' disabled=true}}
-          {{/ui-row}}
-        {{/ui-block}}
-
-      {{/screen.content}}
-    {{/ui-screen}}
-
-  </div>
-</div>
+  {{/md.detail}}
+{{/ui-master-detail}}

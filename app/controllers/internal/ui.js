@@ -6,9 +6,10 @@ const {
 } = Ember;
 
 const routes = [
+  { icon: 'id-card-o', title: 'Form', route: 'form' },
   { icon: 'square-o', title: 'Button', route: 'button' },
   { icon: 'check-square-o', title: 'Checkbox', route: 'checkbox' },
-  { icon: 'id-card-o', title: 'Textfield', route: 'textfield' },
+  { icon: 'bars', title: 'Textfield', route: 'textfield' },
   { icon: 'th-large', title: 'Textarea', route: 'textarea' },
 ];
 

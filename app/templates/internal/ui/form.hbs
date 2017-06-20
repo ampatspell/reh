@@ -1,0 +1,32 @@
+{{#ui-screen as |screen|}}
+  {{#screen.header as |header|}}
+    {{header.title value='Buttons'}}
+    {{header.button title='Save' action=(action 'save')}}
+    {{header.button title='Cancel' action=(action 'cancel') class='warning'}}
+  {{/screen.header}}
+  {{#screen.content}}
+
+    {{#ui-block title='Patient information'}}
+      {{#ui-row title='First name'}}
+        {{ui-input}}
+      {{/ui-row}}
+      {{#ui-row title='Last name'}}
+        {{ui-input}}
+      {{/ui-row}}
+      {{#ui-row title='Social security number'}}
+        {{ui-input placeholder='×××××× – ×××××'}}
+      {{/ui-row}}
+      {{#ui-row}}
+        {{ui-checkbox title='Patient is returning customer'}}
+      {{/ui-row}}
+    {{/ui-block}}
+
+    {{#ui-block}}
+      {{#ui-row}}
+        {{ui-button title='Save' action=(action 'save')}}
+        {{ui-button title='Cancel' action=(action 'cancel') class='warning'}}
+      {{/ui-row}}
+    {{/ui-block}}
+
+  {{/screen.content}}
+{{/ui-screen}}

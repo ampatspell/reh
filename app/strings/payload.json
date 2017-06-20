@@ -1,4 +1,8 @@
 {
+  "settings": {
+    "available": [ "en", "lv" ],
+    "fallback": "lv"
+  },
   "data": [
     {
       "key": "hello",

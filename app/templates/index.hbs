@@ -25,10 +25,18 @@
         {{header.button title='Cancel' class='warning'}}
       {{/screen.header}}
       {{#screen.content}}
-        {{ui-button title='Save' action=(action 'save')}}
-        {{ui-button title='Save' action=(action 'save') disabled=true}}
-        {{ui-button title='Save' action=(action 'save') class='warning'}}
-        {{ui-button title='Save' action=(action 'save') disabled=true class='warning'}}
+
+        {{#ui-block title='Buttons'}}
+          {{#ui-row title='Normal'}}
+            {{ui-button title='Default' action=(action 'save')}}
+            {{ui-button title='Disabled' action=(action 'save') disabled=true}}
+          {{/ui-row}}
+          {{#ui-row title='Warning'}}
+            {{ui-button title='Default' action=(action 'save') class='warning'}}
+            {{ui-button title='Disabled' action=(action 'save') disabled=true class='warning'}}
+          {{/ui-row}}
+        {{/ui-block}}
+
       {{/screen.content}}
     {{/ui-screen}}
 

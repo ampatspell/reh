@@ -1,6 +1,6 @@
 {{#ui-screen as |screen|}}
   {{#screen.header as |header|}}
-    {{header.title value='Buttons'}}
+    {{header.title value='New Addmission'}}
     {{header.button title='Save' action=(action 'save')}}
     {{header.button title='Cancel' action=(action 'cancel') class='warning'}}
   {{/screen.header}}
@@ -8,16 +8,22 @@
 
     {{#ui-block title='Patient information'}}
       {{#ui-row title='First name'}}
-        {{ui-input}}
+        {{ui-input value=model.firstName}}
       {{/ui-row}}
       {{#ui-row title='Last name'}}
-        {{ui-input}}
+        {{ui-input value=model.lastName}}
       {{/ui-row}}
       {{#ui-row title='Social security number'}}
-        {{ui-input placeholder='×××××× – ×××××'}}
+        {{ui-input placeholder='×××××× – ×××××' value=model.socialSecurityNumber}}
       {{/ui-row}}
       {{#ui-row}}
-        {{ui-checkbox title='Patient is returning customer'}}
+        {{ui-checkbox title='Patient is returning customer' value=model.isReturning}}
+      {{/ui-row}}
+    {{/ui-block}}
+
+    {{#ui-block title='Admission'}}
+      {{#ui-row title='Diagnosis'}}
+        {{ui-textarea value=diagnosis}}
       {{/ui-row}}
     {{/ui-block}}
 

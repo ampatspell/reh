@@ -1,25 +1,37 @@
 .ui-button {
   -webkit-appearance: none;
-  background: @accent-color-2;
-  border: 1px solid @accent-color-2-border;
-  color: @white-color;
-  .font(regular, 15px, 1.5);
   padding: 3px 10px;
   border-radius: 3px;
   outline: none;
+  color: @white-color;
   transition:
     background-color @transition,
     border-color @transition;
-  &:hover {
-    background: darken(@accent-color-2, 5%);
-    border: 1px solid darken(@accent-color-2-border, 5%);
-  }
-  &.warning {
-    background: @accent-color-1;
-    border: 1px solid @accent-color-1-border;
+  .font(regular, 15px, 1.5);
+
+  .style(@background, @border) {
+    background: @background;
+    border: 1px solid @border;
     &:hover {
-      background: darken(@accent-color-1, 5%);
-      border: 1px solid darken(@accent-color-1-border, 5%);
+      background: darken(@background, 5%);
+      border: 1px solid darken(@border, 5%);
     }
+    &.disabled,
+    &.no-action {
+      .disabled() {
+        background: fadeout(@background, 50%);
+        border: 1px solid fadeout(@border, 80%);
+      }
+      .disabled;
+      &:hover {
+        .disabled;
+      }
+    }
+  }
+
+  .style(@accent-color-2, @accent-color-2-border);
+
+  &.warning {
+    .style(@accent-color-1, @accent-color-1-border);
   }
 }

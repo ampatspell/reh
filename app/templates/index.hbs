@@ -25,7 +25,10 @@
         {{header.button title='Cancel' class='warning'}}
       {{/screen.header}}
       {{#screen.content}}
-        {{l 'hello'}}
+        {{ui-button title='Save' action=(action 'save')}}
+        {{ui-button title='Save' action=(action 'save') disabled=true}}
+        {{ui-button title='Save' action=(action 'save') class='warning'}}
+        {{ui-button title='Save' action=(action 'save') disabled=true class='warning'}}
       {{/screen.content}}
     {{/ui-screen}}
 

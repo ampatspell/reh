@@ -11,6 +11,7 @@ const routes = [
   { icon: 'check-square-o', title: 'Checkbox', route: 'checkbox' },
   { icon: 'bars', title: 'Textfield', route: 'textfield' },
   { icon: 'th-large', title: 'Textarea', route: 'textarea' },
+  { icon: 'calendar', title: 'Calendar', route: 'calendar' },
 ];
 
 const Route = Ember.Object.extend({

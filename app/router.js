@@ -10,6 +10,7 @@ Router.map(function() {
 
   this.route('internal', { path: '/_dev' }, function() {
     this.route('ui', function() {
+      this.route('calendar');
       this.route('form');
       this.route('checkbox');
       this.route('button');

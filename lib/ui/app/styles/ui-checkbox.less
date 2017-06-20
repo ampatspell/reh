@@ -1,0 +1,40 @@
+.ui-checkbox {
+  display: flex;
+  align-items: center;
+  > input {
+    ._input;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: -4px;
+      left: 1px;
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 17px;
+      color: @black-color;
+      opacity: 0;
+      transition: opacity @transition;
+    }
+    &:checked {
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+  &.disabled {
+    > input {
+      ._input;
+      &:after {
+        color: fadeout(@black-color, 70%);
+      }
+    }
+  }
+  > .title {
+    display: inline-block;
+    margin-left: 5px;
+    .font(regular, 13px, 1.5);
+  }
+}

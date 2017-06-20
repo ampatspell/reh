@@ -26,6 +26,22 @@
       {{/screen.header}}
       {{#screen.content}}
 
+        {{#ui-block title='Checkbox'}}
+          {{#ui-row title='Normal'}}
+            {{ui-checkbox value=off title='Default'}}
+          {{/ui-row}}
+          {{#ui-row title='Checked'}}
+            {{ui-checkbox value=on title='Default'}}
+          {{/ui-row}}
+          {{#ui-row title='Disabled'}}
+            {{ui-checkbox value=off title='Disabled' disabled=true}}
+          {{/ui-row}}
+          {{#ui-row title='Disabled checked'}}
+            {{ui-checkbox value=on title='Disabled' disabled=true}}
+          {{/ui-row}}
+        {{/ui-block}}
+
+
         {{#ui-block title='Buttons'}}
           {{#ui-row title='Normal'}}
             {{ui-button title='Default' action=(action 'save')}}
